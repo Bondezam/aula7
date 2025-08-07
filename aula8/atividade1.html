@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<style>
+    .BTN1{
+        display: inline;
+        background:rgb(0, 0, 0) ;
+        background-color: rgb(76, 0, 255);
+        width: 100px;
+        border-radius: 30%;
+    }
+    .BTN2{
+        display: inline;
+        background:black;
+        background-color: rgb(76, 0, 255);
+        width: 100px;
+        border-radius: 30%;
+    }
+    .BTN3{
+        display: inline;
+        background:black;
+        background-color: rgb(76, 0, 255);
+        width: 100px;
+        border-radius: 30%;
+    }    
+    h1{
+        color: rgba(0, 26, 255, 0.781);
+    }
+    h2{
+        color: rgba(0, 26, 255, 0.781);
+    }
+    h3{
+        color: rgba(0, 26, 255, 0.781);
+    }
+</style>
+
+
+<body style="background-color: rgb(172, 215, 255); text-align: center;">
+    <h1>Verificando números</h1>
+    <button class="BTN1" onclick="verificarNumero()">Verificar Número</button>
+    <script>
+        function verificarNumero() {
+            let numero = prompt("Digite um número:");
+
+            if (numero > 0) {
+                alert("O número é positivo.");
+            } else if (numero < 0) {
+                alert("O número é negativo.");
+            } else {
+                alert("O número é zero.");
+            }
+        }
+    </script>
+    <br><br>
+
+    <h2>Verificador de Votação</h2>
+     <button class="BTN2" onclick="verificarIdadeParaVotacao()">Verificar Idade para Votação</button>
+    <script>
+      function verificarIdadeParaVotacao() {
+            let idade = prompt("Qual é a sua idade?");
+            if (isNaN(idade)) {
+                alert("Por favor, digite uma idade válida.");
+            } else if (idade >= 16) {
+                alert("Você pode votar!");
+            } else {
+                alert("Você ainda não pode votar.");
+            }
+        }
+    </script>
+    <br><br>
+
+
+    <h3>Par ou ímpar?</h3>
+      <button class="BTN3" onclick="verificarParOuImpar()">Verificar Par ou Ímpar</button>
+    <script>
+        function verificarParOuImpar() {
+            let numero = prompt("Digite um número:");
+            if (isNaN(numero)) {
+                alert("Por favor, digite um número válido.");
+            } else if (numero % 2 === 0) {
+                alert("O número é par.");
+            } else {
+                alert("O número é ímpar.");
+            }
+        }
+    </script>
+</body>
+</html>
